@@ -7,6 +7,7 @@
 
 <script>
   import Menus from './components/Menus.vue'
+
   export default {
     components: {Menus},
   }

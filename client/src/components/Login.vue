@@ -21,7 +21,7 @@
     },
     methods: {
       onSubmit(email, password) {
-        this.$store.dispatch('login', {email, password})
+        this.$store.dispatch('LOGIN', {email, password})
           .then(() => this.redirect())
           .catch(({message}) => this.msg = message)
       },

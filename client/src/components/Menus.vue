@@ -19,7 +19,7 @@
     },
     methods: {
       onClickLogout() {
-        store.dispatch('logout').then(() => this.$router.push('/'))
+        store.dispatch('LOGOUT').then(() => this.$router.push('/'))
       }
     }
   }

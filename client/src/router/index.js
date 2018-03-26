@@ -7,7 +7,7 @@ import store from '../store'
 
 Vue.use(Router)
 
-const requireAuth = (to, from, next) => {
+const requireAuth = () => (to, from, next) => {
   if (store.getters.isAuthenticated) return next()
   next('/login?returnPath=me')
 }
@@ -29,7 +29,7 @@ export default new Router({
       path: '/me',
       name: 'Me',
       component: Me,
-      beforeEnter: requireAuth
+      beforeEnter: requireAuth()
     }
   ]
 })

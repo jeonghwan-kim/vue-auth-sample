@@ -40,7 +40,7 @@ app.post('/login', async (req, res) => {
 
   await db.createAccessLog({userId: user.id})
   const accessToken = auth.signToken(user.id)
-  res.json({accessToken, user})
+  res.json({accessToken})
 })
 
 app.use((err, req, res, next) => {
